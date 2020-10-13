@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/SoNiceElijah/node-unn-portal.svg?branch=main)](https://travis-ci.org/SoNiceElijah/node-unn-portal)
+
 # node-unn-portal
 
 NodeJS axios-based unn portal SDK
