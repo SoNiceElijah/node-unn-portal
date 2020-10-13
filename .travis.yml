@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - "10"
+  - "11"
+  - "12"
+
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - npm i
+    - npm test
