@@ -7,10 +7,6 @@ describe("Schedule", () => {
         const answer = await portal.schedule.byGroup(25009);
         assert.isArray(answer);
     });
-    it("Can request today by group", async () => {
-        const answer = await portal.schedule.byGroup(25009, { start : new Date(), finish: new Date() });
-        assert.isArray(answer);
-    })
     it("Can not request invalid date by group", async () => {
         const answer = await portal.schedule.byGroup(25009, { start : new Date("10 sep 2024"), finish: new Date("10 sep 2014") });
         assert.isObject(answer);
@@ -25,10 +21,6 @@ describe("Schedule", () => {
         const answer = await portal.schedule.byAuditorium(2859);
         assert.isArray(answer);
     });
-    it("Can request today by auditorium", async () => {
-        const answer = await portal.schedule.byAuditorium(2859, { start : new Date(), finish: new Date() });
-        assert.isArray(answer);
-    })
     it("Can not request invalid date by auditorium", async () => {
         const answer = await portal.schedule.byAuditorium(2859, { start : new Date("10 sep 2024"), finish: new Date("10 sep 2014") });
         assert.isObject(answer);
@@ -44,11 +36,6 @@ describe("Schedule", () => {
         const answer = await portal.schedule.byPerson(7134);
         assert.isArray(answer);
     });
-
-    it("Can request today by person", async () => {
-        const answer = await portal.schedule.byPerson(7134, { start : new Date(), finish: new Date() });
-        assert.isArray(answer);
-    })
     it("Can not request invalid date by person", async () => {
         const answer = await portal.schedule.byPerson(7134, { start : new Date("10 sep 2024"), finish: new Date("10 sep 2014") });
         assert.isObject(answer);
@@ -63,11 +50,6 @@ describe("Schedule", () => {
         const answer = await portal.schedule.byStudent(91743);
         assert.isArray(answer);
     });
-
-    it("Can request today by student", async () => {
-        const answer = await portal.schedule.byStudent(91743, { start : new Date(), finish: new Date() });
-        assert.isArray(answer);
-    })
     it("Can not request invalid date by student", async () => {
         const answer = await portal.schedule.byStudent(91743, { start : new Date("10 sep 2024"), finish: new Date("10 sep 2014") });
         assert.isObject(answer);
@@ -82,11 +64,6 @@ describe("Schedule", () => {
         const answer = await portal.schedule.byLecturer(26184);
         assert.isArray(answer);
     });
-
-    it("Can request today by lecturer", async () => {
-        const answer = await portal.schedule.byLecturer(26184, { start : new Date(), finish: new Date() });
-        assert.isArray(answer);
-    })
     it("Can not request invalid date by lecturer", async () => {
         const answer = await portal.schedule.byLecturer(26184, { start : new Date("10 sep 2024"), finish: new Date("10 sep 2014") });
         assert.isObject(answer);

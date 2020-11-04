@@ -59,6 +59,42 @@ const { schedule } = require('node-unn-portal');
 4. ```byPerson(id:number|string)```
 5. ```byAuditorium(id:number|string)```
 
+### Timetable
+
+Gets timetable from inner portal IDs.
+
+```js
+const { timetable } = require('node-unn-portal');
+
+
+// Methods like in schedule
+const {
+    byStudent,
+    byGroup,
+    byLecturer,
+    byPerson,
+    byAuditorium
+} = timetable;
+
+```
+
+**Methods:**
+
+1. ```today()```
+2. ```tommorow()```
+3. ```weekAligned()```
+4. ```week()```
+5. ```week2Aligned()```
+6. ```week2()```
+
+**Example:**
+
+```js
+const response = await portal.timetable.byGroup(portal_group_id).today();
+```
+
+Aligned methods get current week. Not aligned methods get 7 days from today
+
 ## License
 
 MIT.

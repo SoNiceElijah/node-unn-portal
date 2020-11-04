@@ -5,6 +5,6 @@ describe("General", () => {
 
         let portal = require('../portal');
         assert.isObject(portal);
-
+        
     })
 })
