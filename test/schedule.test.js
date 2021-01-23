@@ -31,21 +31,6 @@ describe("Schedule", () => {
 
 
 
-
-    it("Can request smth by person", async () => {
-        const answer = await portal.schedule.byPerson(7134);
-        assert.isArray(answer);
-    });
-    it("Can not request invalid date by person", async () => {
-        const answer = await portal.schedule.byPerson(7134, { start : new Date("10 sep 2024"), finish: new Date("10 sep 2014") });
-        assert.isObject(answer);
-        let { error } = answer;
-        assert.isString(error);
-    })
-
-
-
-
     it("Can request smth by student", async () => {
         const answer = await portal.schedule.byStudent(91743);
         assert.isArray(answer);

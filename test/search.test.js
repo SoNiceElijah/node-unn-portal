@@ -24,13 +24,6 @@ describe("Search", () => {
         assert.equal(answer[0].id,"26184")
     })
 
-    it("Can search by person", async () => {
-        const answer = await portal.search.byPerson("Сысоев Александр Владимирович");
-        assert.isArray(answer);
-        assert.equal(answer.length, 1);
-        assert.equal(answer[0].id,"7134")
-    })
-
     it("Can search by auditorium", async () => {
         const answer = await portal.search.byAuditorium("314");
         assert.isArray(answer);

@@ -14,7 +14,6 @@ const ids = {
     byGroup : 25009,
     byAuditorium : 2859,
     byStudent : 91743,
-    byPerson : 7134,
     byLecturer : 26184,
 }
 

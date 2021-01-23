@@ -27,6 +27,16 @@ portal.search.byGroup("382003-2")
 
 ## Documentation
 
+### URL
+
+Request base url can be specified.
+
+```js
+const { base } = require('node-unn-portal');
+base(url);
+// Do portal things....
+```
+
 ### Search
 
 Gets objects from human readable names.
@@ -40,8 +50,7 @@ const { search } = require('node-unn-portal');
 1. ```byStudent(name:string)```
 2. ```byGroup(name:string)```
 3. ```byLecturer(name:string)```
-4. ```byPerson(name:string)```
-5. ```byAuditorium(name:string)```
+4. ```byAuditorium(name:string)```
 
 ### Schedule
 
@@ -56,8 +65,7 @@ const { schedule } = require('node-unn-portal');
 1. ```byStudent(id:number|string)```
 2. ```byGroup(id:number|string)```
 3. ```byLecturer(id:number|string)```
-4. ```byPerson(id:number|string)```
-5. ```byAuditorium(id:number|string)```
+4. ```byAuditorium(id:number|string)```
 
 ### Timetable
 
@@ -72,7 +80,6 @@ const {
     byStudent,
     byGroup,
     byLecturer,
-    byPerson,
     byAuditorium
 } = timetable;
 
