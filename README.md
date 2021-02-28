@@ -1,12 +1,11 @@
 # node-unn-portal
-
-[![Build Status](https://travis-ci.org/SoNiceElijah/node-unn-portal.svg?branch=main)](https://travis-ci.org/SoNiceElijah/node-unn-portal)
+![npm](https://img.shields.io/npm/v/node-unn-portal) ![Travis (.org)](https://img.shields.io/travis/soniceelijah/node-unn-portal) ![NPM](https://img.shields.io/npm/l/node-unn-portal)
 
 NodeJS axios-based unn portal SDK
 
 ## Install
 
-```bash
+```shell
 $ npm i node-unn-portal -S
 ```
 
