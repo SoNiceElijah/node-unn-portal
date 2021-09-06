@@ -7,4 +7,11 @@ describe("General", () => {
         assert.isObject(portal);
         
     })
+    it("Can on/off loaded", () => {
+
+        let portal = require('../portal');
+        portal.modifyon();
+        portal.modifyoff();
+        
+    })
 })

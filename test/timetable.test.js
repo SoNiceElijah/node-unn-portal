@@ -17,18 +17,25 @@ const ids = {
     byLecturer : 26184,
 }
 
-describe("Timetable", () => {
+let iitii = 0; 
+while(iitii++ < 2)
+{
 
-    for(const component in portal.timetable) {
+    describe("Timetable " + (iitii == 1 ? "[mOFF]" : "[mON]"), () => {
 
-        for(const method of methods)
-        {
-            it(`Can get ${method} by ${component}`, async () => {
-                const answer = await portal.timetable[component](ids[component])[method]();
-                assert.isNotNull(answer);
-                let { error } = answer;
-                assert.isUndefined(error);
-            });
+        for(const component in portal.timetable) {
+
+            for(const method of methods)
+            {
+                it(`Can get ${method} by ${component}`, async () => {
+                    const answer = await portal.timetable[component](ids[component])[method]();
+                    assert.isNotNull(answer);
+                    let { error } = answer;
+                    assert.isUndefined(error);
+                });
+            }
         }
-    }
-})
+    })
+
+    portal.modifyon();
+}

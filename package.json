@@ -4,7 +4,7 @@
   "description": "unn portal nodejs sdk",
   "main": "portal.js",
   "scripts": {
-    "test": "mocha --exit --timeout 2000"
+    "test": "mocha --exit --timeout 30000"
   },
   "repository": {
     "type": "git",
