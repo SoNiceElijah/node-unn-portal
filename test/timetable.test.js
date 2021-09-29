@@ -28,7 +28,7 @@ while(iitii++ < 2)
             for(const method of methods)
             {
                 it(`Can get ${method} by ${component}`, async () => {
-                    const answer = await portal.timetable[component](ids[component])[method]();
+                    const answer = await portal.timetable[component](ids[component],{ lng : 1 })[method]();
                     assert.isNotNull(answer);
                     let { error } = answer;
                     assert.isUndefined(error);
