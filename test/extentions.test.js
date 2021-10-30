@@ -7,8 +7,7 @@ const noargsmethods = [
 ]
 
 const nameargmethods = [
-    'when',
-    'where',
+    'week2name'
 ]
 
 const dateargmethods = [
