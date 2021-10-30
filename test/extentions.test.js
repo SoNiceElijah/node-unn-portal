@@ -15,7 +15,7 @@ const dateargmethods = [
 ]
 
 const ids = { 
-    byGroup : 25009,
+    byGroup : 33626,
     byAuditorium : 2859,
     byStudent : 91743,
     byLecturer : 26184,
@@ -27,6 +27,8 @@ while(iitii++ < 2)
 
     describe("Extensions " + (iitii == 1 ? "[mOFF]" : "[mON]"), () => {
 
+        if(iitii == 2) before(() => portal.modifyon())
+
         for(const component in portal.timetable) {
 
             for(const method of noargsmethods)
@@ -34,6 +36,7 @@ while(iitii++ < 2)
                 it(`Can get no args ${method} by ${component}`, async () => {
                     const answer = await portal.timetable[component](ids[component])[method]();
                     assert.isNotNull(answer);
+                    assert.isDefined(answer);
                     let { error } = answer;
                     assert.isUndefined(error);
                 });
@@ -42,8 +45,9 @@ while(iitii++ < 2)
             for(const method of nameargmethods)
             {
                 it(`Can get name args ${method} by ${component}`, async () => {
-                    const answer = await portal.timetable[component](ids[component])[method]("ДУ");
+                    const answer = await portal.timetable[component](ids[component])[method]("АиСД");
                     assert.isNotNull(answer);
+                    assert.isDefined(answer);
                     let { error } = answer;
                     assert.isUndefined(error);
                 });
@@ -54,6 +58,7 @@ while(iitii++ < 2)
                 it(`Can get date args ${method} by ${component}`, async () => {
                     const answer = await portal.timetable[component](ids[component])[method](new Date());
                     assert.isNotNull(answer);
+                    assert.isDefined(answer);
                     let { error } = answer;
                     assert.isUndefined(error);
                 });
