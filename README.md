@@ -92,6 +92,8 @@ const {
 4. ```week()```
 5. ```week2Aligned()```
 6. ```week2()```
+7. ```when()```
+8. ```where()```
 
 **Example:**
 
