@@ -1,6 +1,6 @@
 {
   "name": "node-unn-portal",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "description": "unn portal nodejs sdk",
   "main": "portal.js",
   "scripts": {
